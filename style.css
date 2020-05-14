@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.alert-error {
+  color: red;
+  padding: 30px;
+  background-color: #F8D7DA;
+  font-size: 1.1em;
+}
+
+/* HEADER SECTION */
+.header {
+  background-color: #3F51B5;
+  padding: 20px 30px;
+  color: white;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.options {
+  margin-left: 20px;
+  padding: 6px 10px;
+  width: 250px;
+  font-family: 'Roboto',
+    sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.remove {
+  display: none;
+}
+
+.main-container {
+  width: 95%;
+  margin: 20px auto;
+}
+
+.repo-container,
+.contributors-container {
+  background-color: #f0f1f452;
+  box-shadow: 0 0 5px black;
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.contributors-container {
+  margin-top: 10px
+}
+
+/* REPOSITORY SECTION */
+th,
+td {
+  padding: 4px 2px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* CONTRIBUTORS SECTION */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #e3e3e3;
+  height: 100px;
+}
+
+li:last-child {
+  border: none;
+}
+
+.contributors-avatar {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.contribution-counts {
+  background-color: #808080;
+  color: white;
+  padding: 6px 8px;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+img {
+  width: 60px;
+  border-radius: 3px;
+}
+
+.contributor-header {
+  color: #808080;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid grey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+  }
+
+  .repo-container,
+  .contributors-container {
+    width: 49.5%;
+    margin-top: 0;
+  }
+
+  .remove {
+    display: none;
+  }
+}
