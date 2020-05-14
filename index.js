@@ -84,7 +84,7 @@
 
   //REPOSITORY SECTION
   function tableCreator(table, repo) {
-    const tableArr = [repo.name, repo.description, repo.forks, repo.updated_at];
+    const tableArr = [repo.name, repo.description, repo.forks, new Date(repo.updated_at).toDateString()];
     const names = ['Repository', 'Description', 'Forks', 'Updated'];
     tableArr.forEach((item, index) => {
       const tr = createAndAppend('tr', table);
